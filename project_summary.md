@@ -1,5 +1,5 @@
-# Project Title
-Kubricks Cube, the rubiks cube with style.
+# Kubricks Cube, the rubiks cube with style.
+
 
 ## Authors
 - Marcelo Duende, marceloduende
