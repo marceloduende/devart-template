@@ -1,23 +1,34 @@
 # Project Title
-Insert the name of your project
+Kubricks Cube, the rubiks cube with style.
 
 ## Authors
-- Insert main author name, surname, github account
-- Insert other author(s) name, surname, github account (one per list element)
+- Marcelo Duende, marceloduende
 
 ## Description
-Insert a description containing about 100 to 150 words, including your motivation and the meaning behind your idea and execution. The Judges will be keen to know how your idea pushes the boundaries of code and technology. 
+The idea was to push my math skills. Everyone knows how hard is to figure out the pattern to solve the Rubik's Cube. So I decided to build a solvable Rubik's Cube. I am not concerned about how the tech boundaries are being pushed to the next level, all I am looking for is to have fun. If my fun time pushes technology to the next level, well, then I am a happy winner.
 
 ## Link to Prototype
-NOTE: If your project lives online you can add one or more links here. Make sure you have a stable version of your project running before linking it.
-
-[Example Link](http://www.google.com "Example Link")
+[Kubrick's Cube](http://kubrickscu.be/ "Kubrick's Cube")
 
 ## Example Code
 NOTE: Wrap your code blocks or any code citation by using ``` like the example below.
 ```
-function test() {
-  console.log("Printing a test");
+/******************** ADD AND POSITION CUBES ON THE 3D SPACE *******************/
+function addCubes(){
+	for(var x_loc = 0; x_loc < 3; x_loc++) {
+		for(var y_loc = 0; y_loc < 3; y_loc++) {
+			for(var z_loc = 0; z_loc < 3; z_loc++) {
+				cube = kubricks.cube(x_loc, y_loc, z_loc);
+				cube.position.x = (x_loc - 1)*(cube_size + gap_between_cubes);
+				cube.position.y = (y_loc - 1)*(cube_size + gap_between_cubes);
+				cube.position.z = (z_loc - 1)*(cube_size + gap_between_cubes);
+				cube_wrappers.push(new cube_wrapper(x_loc, y_loc, z_loc, cube));
+				scene.add(cube);
+				objects.push(cube);
+			}
+		}
+	}
+	
 }
 ```
 ## Links to External Libraries
