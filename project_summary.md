@@ -22,9 +22,7 @@ function addCubes(){
 				cube.position.x = (x_loc - 1)*(cube_size + gap_between_cubes);
 				cube.position.y = (y_loc - 1)*(cube_size + gap_between_cubes);
 				cube.position.z = (z_loc - 1)*(cube_size + gap_between_cubes);
-				cube_wrappers.push(new cube_wrapper(x_loc, y_loc, z_loc, cube));
 				scene.add(cube);
-				objects.push(cube);
 			}
 		}
 	}
